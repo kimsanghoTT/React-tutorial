@@ -25,8 +25,14 @@ import R01 from './R01_ClassComponent.js';
 import R02 from './R02_FunctionComponent.js';
 import Props1 from './R03_Props.js';
 import Props2 from './R04_Props2.js';
-import Props3 from './R05_Props3.js'
+import Props3 from './R05_Props3.js';
 
+import 예제1 from './R06_State1.js';
+import 예제2 from './R07_State2.js';
+import 예제3 from './R08_State3.js';
+import 예제4 from './R09_State4.js';
+import 예제5 from './R10_State5.js';
+import 예제6 from './R11_State6.js';
 function App() {
   return (
     <div className="App-header">
@@ -48,6 +54,19 @@ function App() {
         </div> */}
         <p>--------------------------------------------------</p>
         <Props3 num='5' name='김연정' age='40' gender='여자' phone='010-1111-2222'/>
+        
+        <예제1/>
+        <p>--------------------------------------------------</p>
+        <예제2/>
+        <p>--------------------------------------------------</p>
+        <예제3 init="50" step="10"/>
+        {/*init = 처음에 시작할 숫자값, step = 등차값*/}
+        <p>--------------------------------------------------</p>
+        <예제4 init="40" years="1"/>
+        <p>--------------------------------------------------</p>
+        <예제5/>
+        <p>--------------------------------------------------</p>
+        <예제6/>
     </div>
   );
 }
