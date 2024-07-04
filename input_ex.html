@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트(viewport) : 모바일 장치에서도 페이지가 올바르게 보이도록 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>입력버튼을 숨기고 예쁘게 만든 버튼 보여주기</title>
+    <style>
+        .hidingInput{
+            display: none;
+        }
+        .사진추가버튼꾸미기{
+            background-color: yellowgreen;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .사진추가버튼꾸미기:hover{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <!-- 입력 필드 작성 -->
+         <input type="file" id="inputFile" class="hidingInput">
+
+        <!-- 
+        입력 필드 라벨 작성
+        - input 태그의 id 값과 label 태그의 for 값이 일치하면 
+        input 대신 label 태그를 클릭해도 input창이 열림
+        -->
+        <label for="inputFile" class="사진추가버튼꾸미기">사진 추가</label>
+    </form>
+</body>
+</html>
