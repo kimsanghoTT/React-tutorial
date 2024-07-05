@@ -21,22 +21,28 @@ R01_ClassComponent.js를 가져와서 App.js에 적용
 / * * / -> 설명이나 추가 내용을 작성할 때 사용
 {/ * * /} -> 코드를 주석 처리할 때 사용
 */
-import R01 from './R01_ClassComponent.js';
-import R02 from './R02_FunctionComponent.js';
-import Props1 from './R03_Props.js';
-import Props2 from './R04_Props2.js';
-import Props3 from './R05_Props3.js';
+import R01 from './component/R01_ClassComponent.js';
+import R02 from './component/R02_FunctionComponent.js';
+import Props1 from './component/R03_Props.js';
+import Props2 from './component/R04_Props2.js';
+import Props3 from './component/R05_Props3.js';
 
-import 예제1 from './R06_State1.js';
-import 예제2 from './R07_State2.js';
-import 예제3 from './R08_State3.js';
-import 예제4 from './R09_State4.js';
-import 예제5 from './R10_State5.js';
-import 예제6 from './R11_State6.js';
+import 예제1 from './component/R06_State1.js';
+import 예제2 from './component/R07_State2.js';
+import 예제3 from './component/R08_State3.js';
+import 예제4 from './component/R09_State4.js';
+import 예제5 from './component/R10_State5.js';
+import 예제6 from './component/R11_State6.js';
+
+import 컨텍스트1 from './component/R12_Context1.js';
+import 컨텍스트2 from './component/R13_Context2.js';
+import 부트스트랩1 from './component/R14_Bootstrap.js';
+import 컨텍스트3 from './component/R15_Context3/Parent.js'
+import 컨텍스트4 from './component/R16_Context4/최종출력공간.js'
 function App() {
   return (
     <div className="App-header">
-      <R01></R01>
+{/*   <R01></R01>
       <p>--------------------------------------------------</p>
       <R02></R02>
       <p>--------------------------------------------------</p>
@@ -44,7 +50,7 @@ function App() {
       <Props1 num='2' name='홍길은' age='30' score='80'/>
       <Props1 num='3' name='홍길금' age='40' score='70'/>
       <p>--------------------------------------------------</p>
-      <Props2 name='강감찬' age='72' gender='남자'/>
+      <Props2 name='강감찬' age='72' gender='남자'/>*/}
       {/*        
         Props2 객체는 아래의 코드를 한 줄로 작성하기 위해 가져온 이름
 
@@ -52,6 +58,7 @@ function App() {
         <h3>Props 예제2번</h3>
             이름 : 강감찬 / 나이 : 72 / 성별 : 남자
         </div> */}
+        {/* 
         <p>--------------------------------------------------</p>
         <Props3 num='5' name='김연정' age='40' gender='여자' phone='010-1111-2222'/>
         
@@ -60,13 +67,27 @@ function App() {
         <예제2/>
         <p>--------------------------------------------------</p>
         <예제3 init="50" step="10"/>
+        */}
+
         {/*init = 처음에 시작할 숫자값, step = 등차값*/}
+
+        {/*
         <p>--------------------------------------------------</p>
         <예제4 init="40" years="1"/>
         <p>--------------------------------------------------</p>
         <예제5/>
         <p>--------------------------------------------------</p>
         <예제6/>
+        */}
+        <컨텍스트1/>
+        <p>--------------------------------------------------</p>
+        <컨텍스트2/>
+        <p>--------------------------------------------------</p>
+        <부트스트랩1/>
+        <p>--------------------------------------------------</p>
+        <컨텍스트3/>
+        <p>--------------------------------------------------</p>
+        <컨텍스트4/>
     </div>
   );
 }
