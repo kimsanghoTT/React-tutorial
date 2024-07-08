@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const GameTwoStep = () => {
     const [guess, setGuess] = useState('');
     const [message, setMessage] = useState('');
     const [number, setNumber] = useState(Math.floor(Math.random() * 30) + 1);
     const [trying, setTrying] = useState(0);
+    const [correct, setCorrect] = useState(false);
 
     const handleChange = (e) => {
         setGuess(e.target.value);
@@ -16,6 +18,7 @@ const GameTwoStep = () => {
         setTrying(trying + 1);
         if(userGuess === number){
             setMessage('정답');
+            setCorrect(true);
         }
         else if(userGuess > number){
             setMessage('숫자가 큼');
@@ -26,8 +29,13 @@ const GameTwoStep = () => {
         setGuess('');
     }
 
-    const handleRestart = (e) => {
-
+    const handleRestart = () => {
+        const newNumber = Math.floor(Math.random()* 30) + 1;
+        setNumber(newNumber);
+        setMessage('');
+        setGuess('');
+        setTrying(0);
+        setCorrect(false);
     }
 
     return(
@@ -38,7 +46,8 @@ const GameTwoStep = () => {
                 <button>추측하기</button> 
             </form>
             <p>{message}</p>
-            <button onClick={handleRestart}>재시작</button>
+            {correct ? (<Link to="/game"><button>처음으로 이동</button></Link>) : 
+            (<button onClick={handleRestart}>재시작</button>)}  
         </div>
     )
 }
