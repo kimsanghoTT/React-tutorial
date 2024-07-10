@@ -6,6 +6,8 @@ import NavBar from './component/NavBar';
 import Header from './component/Header';
 import GameTwoStep from './component/GameTwoStep';
 import TodoList from './component/TodoList';
+import TicTapToe from './component/TicTapToe';
+import TicTapToe2 from './component/TicTapToe2';
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
         <Route path="/game" element={<Game/>}/>
         <Route path="/game-two-step" element={<GameTwoStep/>}/>
         <Route path="/todoList" element={<TodoList/>}/>
+        <Route path="/TicTapToe" element={<TicTapToe/>}/>
+        <Route path="/TicTapToe2" element={<TicTapToe2/>}/>
       </Routes>
     </div>
   );
