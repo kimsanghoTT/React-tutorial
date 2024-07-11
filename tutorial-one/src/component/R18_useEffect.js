@@ -14,7 +14,7 @@ function UseEffectEx(){
             </pre>
             useEffect 사용 방법
 
-                import {UseEffect} form 'react';
+                import {useEffect} form 'react';
                 useEffect(function, deps)
                               ↓       ↓
                 useEffect(() => {},   []); //function의 이름이나 특정 기능이 없을 때 익명함수로 표현

@@ -39,6 +39,15 @@ import 컨텍스트2 from './component/R13_Context2.js';
 import 부트스트랩1 from './component/R14_Bootstrap.js';
 import 컨텍스트3 from './component/R15_Context3/Parent.js'
 import 컨텍스트4 from './component/R16_Context4/최종출력공간.js'
+
+import Ref예제1번 from './component/R19_useRef.js';
+import Ref예제2번 from './component/R20_useRefInput.js';
+import Ref예제3번 from './component/R21_useRefSignUp.js';
+import {RefEx as Ref예제4번} from './component/R22_useRefEx.js';
+import Game from './component/R23_Dodgegoblin/R23_Dodgegoblin.js';
+
+import { Axios_Ex1 as Axios예제1번 } from './component/R25_Axios_Ex1.js';
+import Axios예제2번 from './component/R26_Axios_Ex2.js';
 function App() {
   return (
     <div className="App-header">
@@ -79,6 +88,7 @@ function App() {
         <p>--------------------------------------------------</p>
         <예제6/>
         */}
+        {/* 
         <컨텍스트1/>
         <p>--------------------------------------------------</p>
         <컨텍스트2/>
@@ -88,6 +98,23 @@ function App() {
         <컨텍스트3/>
         <p>--------------------------------------------------</p>
         <컨텍스트4/>
+        <p>--------------------------------------------------</p>
+        */}
+         
+        <p>--------------------------------------------------</p>
+        <Ref예제1번/>
+        <p>--------------------------------------------------</p>
+        <Ref예제2번/>
+        <p>--------------------------------------------------</p>
+        <Ref예제3번/>
+        <p>--------------------------------------------------</p>
+        <Ref예제4번/>
+        
+        <Game/>
+        <p>--------------------------------------------------</p>
+        <Axios예제1번/>
+        <p>--------------------------------------------------</p>
+        <Axios예제2번/>
     </div>
   );
 }
