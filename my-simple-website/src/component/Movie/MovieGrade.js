@@ -14,7 +14,7 @@ const MovieGrade = () => {
             //위의 url은 []가 아니라 {}로 시작하므로 {} 데이터를 감싸줄 임의의 변수명을 사용.
             //res는 []의 역할을 하며, 그 안의 "data"의 데이터를 가져옴
             //주소값에 key 이름으로 작성돈 data에서 movie라는 키 값 안에 적힌 title과 이미지를 가져올 것
-            // [{data{movie}}]를 가져올 것
+            // [{data{movies}}]를 가져올 것
             setMovies(res.data.data.movies) // {}들에서 data를 가져 옴
 
             //영화 데이터 모두 가져오면 로딩중을 false로 변경
