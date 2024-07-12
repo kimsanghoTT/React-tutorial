@@ -48,6 +48,8 @@ import Game from './component/R23_Dodgegoblin/R23_Dodgegoblin.js';
 
 import { Axios_Ex1 as Axios예제1번 } from './component/R25_Axios_Ex1.js';
 import Axios예제2번 from './component/R26_Axios_Ex2.js';
+
+import Fetch예제1번 from './component/R28_Fetch_ex.js';
 function App() {
   return (
     <div className="App-header">
@@ -100,7 +102,7 @@ function App() {
         <컨텍스트4/>
         <p>--------------------------------------------------</p>
         */}
-         
+        {/* 
         <p>--------------------------------------------------</p>
         <Ref예제1번/>
         <p>--------------------------------------------------</p>
@@ -111,10 +113,14 @@ function App() {
         <Ref예제4번/>
         
         <Game/>
+
         <p>--------------------------------------------------</p>
         <Axios예제1번/>
         <p>--------------------------------------------------</p>
+        
         <Axios예제2번/>
+        */}
+        <Fetch예제1번/>
     </div>
   );
 }

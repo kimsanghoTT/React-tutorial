@@ -9,6 +9,7 @@ const Axios_JSON = () => {
             JSON : JavaScript Object Notation
                 - js 객체 표기법
                 - 주로 서버(java 백엔드)와 클라이언트(프론트엔드)간의 데이터 교환
+                {/*
                 {
                     "표기명" : "표기 내용",
                     "표기명" : ["표기 내용", "표기 내용2", "표기 내용3"],
@@ -18,6 +19,7 @@ const Axios_JSON = () => {
                     }
                     ....
                 }
+                */}
                 - 개발자들이 가져온 값을 화면에 보여주기 위해 임시 데이터 json을 사용해서 표현
                     https://jsonplaceholder.typicode.com/ 를 많이 사용
                 <a href="https://jsonplaceholder.typicode.com/">이동하기</a>
@@ -32,7 +34,7 @@ const Axios_JSON = () => {
                 "https://jsonplaceholder.typicode.com/users"
         </pre>
         <h3>비동기처리</h3>
-        Ajax : js를 이용해서 서버아 비동기적으로 데이터를 교환. FetchAPI를 사용
+        Ajax : js를 이용해서 서버와 비동기적으로 데이터를 교환. FetchAPI를 사용
         Axios : js의 http 클라이언트 라이브러리. http요청을 보내고 응답을 처리하기 위해 사용
         Promise : 성공 유무
         Fetch  : 성공 유무
