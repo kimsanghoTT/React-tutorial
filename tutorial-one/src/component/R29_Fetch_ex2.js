@@ -16,7 +16,7 @@ const PhotoList = () => {
 
             //데이터의 일부분만 가져오기 -> slice 이용
             //slice(시작위치, 끝위치);
-            setPhotos(data.slice(0, 10));
+            setPhotos(data.slice(0, 2));
         })
 
         .catch(e => {

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
-import Pagination from '../R31_PageNation/Pagination';
+import Pagination from '../R31_PagiNationEx/Pagination';
 import './Pagination.css';
 
 const AlbumList = () => {

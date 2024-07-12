@@ -51,8 +51,11 @@ import Axios예제2번 from './component/R26_Axios_Ex2.js';
 
 import Fetch예제1번 from './component/R28_Fetch_ex.js';
 import Fetch예제2번 from './component/R29_Fetch_ex2.js';
-import Board from './component/R31_PageNation/Board.js';
-import AlbumList from './component/R32_PageNationEx/Album.js';
+import Board from './component/R31_PagiNation/Board.js';
+import AlbumList from './component/R31_PagiNationEx/Album.js';
+import Board2 from './component/R31_PagiNationEx2/Board.js';
+import Profile from './component/R32_Profile.js';
+import Profile2 from './component/R33_MultiProfile.js';
 function App() {
   return (
     <div className="App-header">
@@ -123,12 +126,16 @@ function App() {
         
         <Axios예제2번/>
         */}
-        {/* 
+        
         <Fetch예제1번/>
         <Fetch예제2번/>
-        */}
-        {/*<Board/> */}
-        <AlbumList/>
+        
+        <Board/> 
+        <AlbumList/> 
+        <Board2/>
+        
+        <Profile/>
+        <Profile2/>
     </div>
   );
 }
