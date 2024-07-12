@@ -26,8 +26,8 @@ const FetchEx = () => {
         <>
         <h1>User List 보기</h1>
         <ul>
-            {users.map(user => {
-                <li key={user.id}>{user.name}</li>
+            {users.map(user => {       
+                return <li key={user.id}>{user.name}</li>
             })}
         </ul>
         </>
