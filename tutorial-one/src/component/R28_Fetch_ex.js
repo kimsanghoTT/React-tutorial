@@ -18,17 +18,17 @@ const FetchEx = () => {
         })
 
         .catch(e => {
-            alert("에러가 발생했습니다.");
+            alert("에러가 발생했습니다." + e);
             //setError(e);
         })
-    },[]);
+    }, []);
     return(
         <>
         <h1>User List 보기</h1>
         <ul>
-            {users.map(user => {       
-                return <li key={user.id}>{user.name}</li>
-            })}
+            {users.map(user => (      
+                <li key={user.id}>{user.name}</li>
+            ))}
         </ul>
         </>
     )
