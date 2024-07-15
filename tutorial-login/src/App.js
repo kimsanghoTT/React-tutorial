@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import LoginContext from './components/LoginContext';
 import SignUp from './components/SignUp';
 import Login from './components/Login';
+import './App.css';
 
 // App.js는 제일 상위 컴포넌트(객체)
 function App() {
