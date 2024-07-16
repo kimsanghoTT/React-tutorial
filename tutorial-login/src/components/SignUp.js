@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 
-const SignUp = () => {
+/* console에서 에러가 뜨면 백엔드와 연결이 안됐을 가능성이 높음 */
+const Signup = () => {
 
     const [id, setId] = useState('');
     const [pw, setPw] = useState('');
@@ -28,7 +29,7 @@ const SignUp = () => {
         //DB에 중복되는 아이디가 있는지 비동기로 아이디 중복검사 수행
         //axios나 fetch 사용
         fetch("/idCheck?id=" + eventId) //SpringBoot Controller와 연결할 Mapping url
-        .then(res => res.text())
+        .then(response => response.text())
         .then(result => {
 
             //중복이 아닐 때 true 맞다면 false
@@ -133,4 +134,4 @@ const SignUp = () => {
         </div>
     )
 }
-export default SignUp;
+export default Signup;

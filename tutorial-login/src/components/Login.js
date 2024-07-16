@@ -36,7 +36,12 @@ const Login = () => {
             //id, pw값 모두 지우기
             setId('');
             setPw('');
+            alert("로그인 성공");
         })
+    }
+
+    const logout = () => {
+        setLoginMember(null);
     }
 
     return(
@@ -60,6 +65,9 @@ const Login = () => {
                     </tr>
                 </tbody>
             </table>
+            {loginMember && (
+                <button onClick={logout}>로그아웃</button>
+            )}
         </div>
     )
 }

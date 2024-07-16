@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import LoginContext from './components/LoginContext';
-import SignUp from './components/SignUp';
+import Signup from './components/SignUp';
 import Login from './components/Login';
 import './App.css';
+import TodoList from './components/TodoList';
 
 // App.js는 제일 상위 컴포넌트(객체)
 function App() {
@@ -26,12 +27,15 @@ function App() {
         {/* signUpView가 true 일 경우에만 실행되는 공간 = 눈에 보여짐 */}
 
         {/* 조건식 && (true일 경우 실행) */}
-        {signUpView === true && (<SignUp/>)}
+        {signUpView === true && (<Signup/>)}
       </div>
 
       <h1>Todo List</h1>
       {/* 로그인을 해야 TodoList 보이도록 */}
       <Login/>
+      <hr/>
+      {/* 로그인이 됐을 때 로그인 한 회원의 todoList 출력 */}
+      {loginMember !== null && (<TodoList/>)}
     
     </LoginContext.Provider>
   );

@@ -1,4 +1,4 @@
-import React,{createContext} from "react";
+import {createContext} from "react";
 
 // 로그인을 한 다음에 로그인한 정보를 모든 창에 띄워주기
 // App.js에서 div태그 대신에 LoginContext 태그로 return을 감싸주면
