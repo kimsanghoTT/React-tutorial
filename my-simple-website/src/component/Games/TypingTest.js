@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import Result from './Result';
-import './TypingTest.css';
+import '../../CSS/TypingTest.css';
 
 //타자대회 컴포넌트 바깥으로 옮겨 별개로 사용
 const typingRequest = [

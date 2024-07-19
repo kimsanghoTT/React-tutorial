@@ -1,5 +1,5 @@
 import React from "react";
-import './TypingTest.css';
+import '../../CSS/TypingTest.css';
 
 const Result = ({text, showResult}) => {
 

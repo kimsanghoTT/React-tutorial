@@ -61,3 +61,34 @@ nav ul li a:hover{
   background-color: #575757;
   border-radius: 4px;
 }
+
+.footer{
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+/* 111 ~ 111111 : 검은색계열, 2,3,4,5 ...  <->  fff ~ ffffff : 하얀색계열 */
+
+.footer-content{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.footer p {
+  margin: 0;
+}
+.footer-links{
+  margin-top: 10px;
+}
+.footer-links a{
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer-links a:hover{
+  text-decoration: underline;
+}

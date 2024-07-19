@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './MovieGrade.css';
+import '../../CSS/MovieGrade.css';
 
 const MovieGrade = () => {
 

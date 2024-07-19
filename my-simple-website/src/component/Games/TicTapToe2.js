@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import './TipTacToeStepOne.css';
+import '../../CSS/TipTacToeStepOne.css';
 
 const shuffleArray = (array) => {
     return array.sort(() => Math.random() - 0.5);

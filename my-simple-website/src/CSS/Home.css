@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+}
+.home-container{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.home-header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.home-header h1{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.home-header p{
+    font-size: 16px;
+    color: #555;
+}
+
+/* 소개 섹션 1,2, 보유기술, 프로젝트 공통 css */
+.home-about-one, .home-about-two, .home-skills, .home-projects{
+    margin-bottom: 40px;
+}
+.home-about-one h2, .home-about-two h2, .home-skills h2, .home-projects h2{
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+/* 소개 섹션 1 */
+.home-about-one p{
+    font-size: 20px;
+    color: #444;
+}
+
+/* 소개 섹션 2 */
+.home-about-two .about-row{
+    display: flex;
+    align-items: center;
+}
+.home-about-two .about-image{
+    flex: 1;
+    text-align: center;
+}
+.home-about-two .about-image img{
+    max-width: 50%;
+    height: auto; 
+    border-radius: 10px;
+}
+.home-about-two .about-text{
+    flex : 2;
+    padding-left: 20px;
+}
+.home-about-two .about-text p{
+    font-size: 14px;
+    color: #444;
+}
+
+/* 보유 기술 섹션 */
+.home-skills ul{
+    list-style-type: none;
+    padding: 0;
+}
+.home-skills ul li{
+    background-color: #f7f7f7;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    color: #444;
+}
+
+/* 프로젝트 섹션 */
+.home-projects .project-item{
+    margin-bottom: 20%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #e0dfdf;
+}
+.home-projects .project-item h3{
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.home-projects .project-item p{
+    font-size: 25px;
+    color: #444;
+}

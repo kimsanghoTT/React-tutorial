@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from 'react-router-dom';
-import './TipTacToeStepOne.css';
+import '../../CSS/TipTacToeStepOne.css';
 /*
 import React, { useEffect, useState } from "react";
 useEffect(() => {

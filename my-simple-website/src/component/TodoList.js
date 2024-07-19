@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './TodoList.css'
+import '../CSS/TodoList.css';
 
 function TodoList() {
   const [todos, setTodos] = useState([]); //빈 배열로 설정
