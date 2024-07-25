@@ -27,7 +27,7 @@ const Home = () =>{
             <h2>소개</h2>
                 <div className="about-row">
                     <div className="about-image">
-                        <img src="/김상호_0115.jpg" alt="프로필 사진"/>
+                        <img src="/image/김상호_0115.jpg" alt="프로필 사진"/>
                     </div>
                     <div className="about-text">
                         <p>이름 : 김상호</p>

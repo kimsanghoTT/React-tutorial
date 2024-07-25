@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React 웹캠 스트리밍</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+    }
+    video {
+      width: 80%;
+      max-width: 600px;
+      border: 2px solid #333;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script type="text/babel">
+    const { useRef, useEffect } = React;
+
+    const WebcamCapture = () => {
+      const videoRef = useRef();
+
+      useEffect(() => {
+        const constraints = { video: true };
+
+        navigator.mediaDevices.getUserMedia(constraints)
+          .then((stream) => {
+            videoRef.current.srcObject = stream;
+          })
+          .catch((err) => {
+            console.error('미디어 장치 접근 권한이 없습니다:', err);
+          });
+      }, []);
+
+      return (
+        <video ref={videoRef} autoPlay playsInline />
+      );
+    };
+
+    ReactDOM.render(
+      <WebcamCapture />,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>
