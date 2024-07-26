@@ -8,6 +8,8 @@ const UserForm = ({addUser}) => {
     const handleSubmit = (e) => {
         e.preventDefault(); // 무지성 제출 방지
         addUser({name, email});
+        setName('');
+        setEmail('');
     }
     return(
         <div>
