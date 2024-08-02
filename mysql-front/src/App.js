@@ -107,7 +107,7 @@ function App() {
         await axios.delete(`/users`, {params: {id}});
     */
   }
-
+  console.log(users);
   //유저 정보 수정
   const updateUser = async (user) => {
     await axios.put('/users', user); // PutMapping/users로 주소값이 설정된 수정하는 주소 연결

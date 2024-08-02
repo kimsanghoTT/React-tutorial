@@ -10,6 +10,8 @@ function UserInfo() {
   const [userInfo, setUserInfo] = useState(null);
   const location = useLocation();
   const [loading, setLoading] = useState(true);
+  const [userId, setUserId] = useState('');
+  const [userPw, setUserPw] = useState('');
 
   //어떠한 클릭이 없어도 UserInfo 페이지 들어오면 자동으로 실행되는 효과
   useEffect(() => {
@@ -49,6 +51,19 @@ function UserInfo() {
     return <div>데이터 정보 가져오는 중...</div>
   }
 
+  const submitToSignUp = (e) => {
+    e.preventDefault();
+
+    axios.post("/signUp", {
+      id : userId,
+      email : userInfo.response.email,
+      name : userInfo.response.name,
+      password : userPw,
+      profile_image: userInfo.response.profile_image
+    })
+    setUserId('');
+    setUserPw('');
+  }
 
   return (
     <>
@@ -69,7 +84,13 @@ function UserInfo() {
 
       <div>
         <h2>회원가입에 필요한 아이디 및 비밀번호 작성하기</h2>
-        <input type="text" />
+        <form>
+          <label>아이디 : </label>
+          <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)}/>
+          <label>비밀번호 : </label>
+          <input type="password" value={userPw} onChange={(e) => setUserPw(e.target.value)}/>
+          <button onClick={submitToSignUp}>회원가입하기</button>
+        </form>
       </div>
     </>
   );
