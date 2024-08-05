@@ -1,9 +1,9 @@
 import { useState } from "react";
 import User from "./User";
 import EditForm from "./EditForm";
-import './Exam2.css';
+import './MemberList.css';
 
-function Exam2() {
+function MemberList() {
 
     //DB에 값이 없거나 초기값 목록들을 작성하는 방법
     const [userList, setUserList] = useState([
@@ -74,4 +74,4 @@ function Exam2() {
 }
 
 
-export default Exam2;
+export default MemberList;
