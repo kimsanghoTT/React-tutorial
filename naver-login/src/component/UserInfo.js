@@ -10,8 +10,7 @@ function UserInfo() {
   const [userInfo, setUserInfo] = useState(null);
   const location = useLocation();
   const [loading, setLoading] = useState(true);
-  const [userId, setUserId] = useState('');
-  const [userPw, setUserPw] = useState('');
+  const [userPw, setUserPw] = useState(null);
 
   //어떠한 클릭이 없어도 UserInfo 페이지 들어오면 자동으로 실행되는 효과
   useEffect(() => {
@@ -34,7 +33,7 @@ function UserInfo() {
     if(accessToken) {
 
         axios.get(`/userinfo?access_token=${accessToken}`)
-        //.then((res) => {    .then((res) => {    (res) 를 막아버리면  => 이후로는 res 선언되지 않은
+        //.then((res) => {    .then((res) => {    (res) 를 막아버리면  => 이후로는 res는 선언되지 않은
         // 지역변수명이 되기 때문에 res를 찾을 수 없는 것
         .then(response => {
           setUserInfo(response.data);
@@ -51,19 +50,37 @@ function UserInfo() {
     return <div>데이터 정보 가져오는 중...</div>
   }
 
-  const submitToSignUp = (e) => {
-    e.preventDefault();
-
-    axios.post("/signUp", {
-      id : userId,
+  const submitToSignUp = () => {
+    if(!userPw){
+      alert("비밀번호 입력");
+      return;
+    }
+    
+    axios.post("http://localhost:9011/naverAPI/register", { // controller의 매핑주소 작성
+      id : userInfo.response.id,
       email : userInfo.response.email,
+      nickname : userInfo.response.nickname,
       name : userInfo.response.name,
-      password : userPw,
-      profile_image: userInfo.response.profile_image
+      gender : userInfo.response.gender,
+      profileImage: userInfo.response.profile_image,
+      password : userPw
     })
-    setUserId('');
+    .then(res => {
+      console.log(res.data);
+      alert("회원가입 완료");
+    })
+    .catch(err => {
+      console.log("에러 확인 ", err);
+      alert("회원가입 실패");
+    })
     setUserPw('');
   }
+
+  /*
+  const ChangingPw = (e) => {
+    setUserPw(e.target.value);
+  }
+  */
 
   return (
     <>
@@ -74,8 +91,8 @@ function UserInfo() {
           <input type="email" value={userInfo.response.email} disabled/>
           <input type="text" value={userInfo.response.nickname} disabled/>
           <input type="text" value={userInfo.response.name} disabled/>
-          <input type="text" value={userInfo.response.profile_image} disabled/>
-          <input type="text" value={userInfo.response.name} disabled/>
+          <input type="text" value={userInfo.response.gender} disabled/>
+          <img src={userInfo.response.profile_image} alt="프로필이미지"/>
           {/* 네이버에서 가져온 id 값을 input에 넣어주고 수정하지 못하게 막음처리 */}
         </div>
       ) : (
@@ -84,13 +101,9 @@ function UserInfo() {
 
       <div>
         <h2>회원가입에 필요한 아이디 및 비밀번호 작성하기</h2>
-        <form>
-          <label>아이디 : </label>
-          <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)}/>
-          <label>비밀번호 : </label>
-          <input type="password" value={userPw} onChange={(e) => setUserPw(e.target.value)}/>
-          <button onClick={submitToSignUp}>회원가입하기</button>
-        </form>
+        <input type="password" value={userPw} onChange={(e) => setUserPw(e.target.value)}  />
+
+        <button onClick={submitToSignUp}>회원가입하기</button>
       </div>
     </>
   );
