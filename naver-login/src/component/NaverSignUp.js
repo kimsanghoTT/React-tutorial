@@ -1,16 +1,18 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import AuthContext from "./Layout/AuthContext";
 /*
 useLocation : URL의 정보를 포함한 객체
               경로, 해시, 문자열값 등 가지고 온 객체
 
 */
-function UserInfo() {
+function NaverSignUp() {
   const [userInfo, setUserInfo] = useState(null);
   const location = useLocation();
   const [loading, setLoading] = useState(true);
   const [userPw, setUserPw] = useState(null);
+  const {loginMember} = useContext(AuthContext);
 
   //어떠한 클릭이 없어도 UserInfo 페이지 들어오면 자동으로 실행되는 효과
   useEffect(() => {
@@ -109,4 +111,4 @@ function UserInfo() {
   );
 }
 
-export default UserInfo;
+export default NaverSignUp;
